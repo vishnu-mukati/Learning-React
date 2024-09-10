@@ -1,15 +1,16 @@
+import "./ExpenseITem.css"
+
 function ExpenseItem(){
     return (
-        <div>
+        <div className ="expense-item">
             <div>
-                <h2>Date</h2>
                 <div>15 August 2023</div>
             </div>
-            <div>
-                <h2>Title</h2>
-                <div>Amount</div>
+            <div className ="expense-item__description">
+                <h2>Book</h2>
+                <div className ="expense-item__price">$10</div>
             </div>
-            <div>
+            <div className = "expense-item__location">
                 <h2>Delhi</h2>
             </div>
         </div>

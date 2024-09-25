@@ -1,33 +1,27 @@
 import ExpenseItem from "./components/ExpenseItem";
 
 function App() {
+  let expenses = [
+    { id: '1', date: new Date(2023, 11, 5), title: 'insurance', amount: '500', location: 'Delhi' },
+    { id: '2', date: new Date(2023, 8, 29), title: 'laptop', amount: '400', location: 'indore' },
+    { id: '3', date: new Date(2023, 7, 7), title: 'pen', amount: '50', location: 'dewas' },
+    { id: '4', date: new Date(2023, 3, 14), title: 'mobile', amount: '740', location: 'ujjain' },
+    { id: '5', date: new Date(2023, 5, 23), title: 'car', amount: '750', location: 'mumbai' },
+  ]
   return (
     <div>
       <h1>Let's get started</h1>
-      <ExpenseItem
-        date={new Date(2023, 11, 5)}
-        title="insurance"
-        amount="50"
-        location="Delhi"
-      ></ExpenseItem>
-      <ExpenseItem
-        date={new Date(2023, 3, 25)}
-        title="Book"
-        amount="20"
-        location="Delhi"
-      ></ExpenseItem>
-      <ExpenseItem
-        date={new Date(2023, 10, 11)}
-        title="Pen"
-        amount="5"
-        location="Hyderabad"
-      ></ExpenseItem>
-      <ExpenseItem
-        date={new Date(2023, 1, 14)}
-        title="Laptop"
-        amount="200"
-        location="Mumbai"
-      ></ExpenseItem>
+      {expenses.map((expense, index) => {
+        return (
+          <ExpenseItem
+            key={expense.id}
+            date={expense.date}
+            title={expense.title}
+            amount={expense.amount}
+            location={expense.location}
+          ></ExpenseItem>
+        )
+      })}
     </div>
   );
 }

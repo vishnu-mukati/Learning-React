@@ -1,6 +1,6 @@
 import "./ExpenseDate.css";
 
-function ExpenseDate(props) {
+const ExpenseDate = (props) => {
     const months = [
         "January",
         "February",
@@ -16,14 +16,14 @@ function ExpenseDate(props) {
         "December"
     ]
 
-    const month = months[props.CalendarDate.getMonth()];    
+    const month = months[props.CalendarDate.getMonth()];
     const year = props.CalendarDate.getFullYear();
     const date = props.CalendarDate.getDate();
     return (
-        <div className ="expense-date">
-            <div className ="expense-date__month">{month}</div>
-            <div className ="expense-date__year">{year}</div>
-            <div className ="expense-date__day">{date}</div>
+        <div className="expense-date">
+            <div className="expense-date__month">{month}</div>
+            <div className="expense-date__year">{year}</div>
+            <div className="expense-date__day">{date}</div>
         </div>
     );
 }

@@ -1,6 +1,6 @@
 
 import Expenses from "./components/Expenses/Expenses";
-function App() {
+const App = () => {
   let expenses = [
     { id: '1', date: new Date(2023, 11, 5), title: 'insurance', amount: '500', location: 'Delhi' },
     { id: '2', date: new Date(2023, 8, 29), title: 'laptop', amount: '400', location: 'indore' },
@@ -11,7 +11,7 @@ function App() {
   return (
     <div>
       <h1>Let's get started</h1>
-      <Expenses expenses ={expenses}/>
+      <Expenses expenses={expenses} />
     </div>
   );
 }

@@ -4,7 +4,7 @@ import "./ExpenseITem.css"
 function ExpenseItem(props) {
     return (
         <div className="expense-item">
-            <ExpenseDate CalendarDate = {props.date}></ExpenseDate>
+            <ExpenseDate CalendarDate = {props.date}/>
             <div className="expense-item__location">
                 <h2>{props.location}</h2>
             </div>

@@ -13,7 +13,7 @@ function Expenses(props) {
                         title={expense.title}
                         amount={expense.amount}
                         location={expense.location}
-                    ></ExpenseItem>
+                    />
                 )
             })}
         </div>

@@ -2,20 +2,61 @@ import React, { useState } from "react";
 import "./ExpenseForm.css";
 
 const ExpenseForm = () => {
-    const [enteredtitle, setenteredTitle] = useState('');
-    const [enteredamount, setenteredAmount] = useState('');
-    const [entereddate, setenteredDate] = useState('');
+
+    // this is multiple states
+
+    // const [enteredtitle, setenteredTitle] = useState('');
+    // const [enteredamount, setenteredAmount] = useState('');
+    // const [entereddate, setenteredDate] = useState('');
+
+    // this is the single state example
+    const [userInput,setUserInput] = useState({
+        enteredtitle : "",
+        enteredamount : "",
+        entereddate : "",
+    })
 
     const titleChangeHandler = (event) => {
-        setenteredTitle(event.target.value);
+
+        // this is the multiple state example
+        // setenteredTitle(event.target.value);
+
+        // this is the exaple of single state
+        setUserInput((prevState)=>{
+            return {
+                ...prevState,
+                enteredtitle : event.terget.value,
+            }
+        })
+
     }
 
     const amountChangeHandler =(event) =>{
-        setenteredAmount(event.target.value);
+
+        // this is the multiple state example
+        // setenteredAmount(event.target.value);
+
+         // this is the exaple of single state
+         setUserInput((prevState)=>{
+            return {
+                ...prevState,
+                enteredamount : event.terget.value,
+            }
+        })
     }
 
     const dateChangeHandler = (event) =>{
-        setenteredDate(event.target.value);
+
+        // this is the mmultiple state example
+        // setenteredDate(event.target.value);
+
+         // this is the exaple of single state
+         setUserInput((prevState)=>{
+            return {
+                ...prevState,
+                entereddate : event.terget.value,
+            }
+        })
     }
 
     return <form>

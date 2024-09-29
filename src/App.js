@@ -9,9 +9,14 @@ const App = () => {
     { id: '4', date: new Date(2023, 3, 14), title: 'mobile', amount: '740', location: 'ujjain' },
     { id: '5', date: new Date(2023, 5, 23), title: 'car', amount: '750', location: 'mumbai' },
   ]
+ 
+  const passExpenseDataHandler = (passNewExpenseData) =>{
+      console.log(passNewExpenseData);
+  }
+
   return (
     <div>
-      <NewExpense/>
+      <NewExpense onPassExpenseData={passExpenseDataHandler}/>
       <Expenses expenses={expenses} />
     </div>
   );

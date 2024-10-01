@@ -17,7 +17,6 @@ const Expenses = (props) => {
     })
 
     let expensescontent = <p>Expenses are not found</p>
-
     if(filteredExpensese.length > 0){
         expensescontent =  filteredExpensese.map((expense, index) => {
                 return (
@@ -30,12 +29,11 @@ const Expenses = (props) => {
                     />
                 )
             })}
-    
-
     return (
         <Card className="expenses">
             <ExpensesFilter selected={filteredYear} onChangefilter={changeFilterHandler} />
             {expensescontent}
+            {filteredExpensese.length ===1 && <p>Only one expense here. Please add more</p>}
         </Card>
     );
 }

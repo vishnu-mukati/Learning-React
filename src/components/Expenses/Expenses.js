@@ -18,9 +18,9 @@ const Expenses = (props) => {
     return (
         <Card className="expenses">
             <ExpensesFilter selected={filteredYear} onChangefilter={changeFilterHandler} />
-
-            {filteredExpensese.length===0 ? (<p>Expenses are not found</p>)
-            :filteredExpensese.map((expense, index) => {
+            {filteredExpensese.length===0 && <p>Expenses are not found</p>}
+            {filteredExpensese.length >0 && 
+            filteredExpensese.map((expense, index) => {
                 return (
                     <ExpenseItem
                         key={expense.id}
